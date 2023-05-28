@@ -1,2 +1,5 @@
-def findClosestPair(pairs):
-    print("hello world")
+def findClosestPair(X, Y):
+    n, _ = X.shape
+
+    if (n == 2):
+        return

@@ -22,7 +22,10 @@ pairs = generateElements(pairs, n)
 
 display(pairs)
 
-pairs = sorted(pairs, key=lambda p: (p[0], p[1]))
-pairs = np.array(pairs)
-display(pairs)
-findClosestPair(pairs)
+X = np.array(sorted(pairs, key=lambda p: (p[0], p[1])))
+Y = np.array(sorted(pairs, key=lambda p: (p[1], p[0])))
+
+display(X)
+display(Y)
+
+findClosestPair(X, Y)
