@@ -1,5 +1,6 @@
 import random
 import numpy as np
+from displayPairs import display
 
 
 def generateElements(matrix, n):
@@ -17,3 +18,5 @@ n = 10
 
 pairs = np.empty((n, 2), dtype=int)
 pairs = generateElements(pairs, n)
+
+display(pairs)
