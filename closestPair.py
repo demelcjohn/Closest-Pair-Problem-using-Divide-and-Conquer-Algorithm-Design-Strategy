@@ -1,6 +1,7 @@
 import random
 import numpy as np
-from displayPairs import display
+from helperFunc import display
+from findClosestPair import findClosestPair
 
 
 def generateElements(matrix, n):
@@ -20,3 +21,8 @@ pairs = np.empty((n, 2), dtype=int)
 pairs = generateElements(pairs, n)
 
 display(pairs)
+
+pairs = sorted(pairs, key=lambda p: (p[0], p[1]))
+pairs = np.array(pairs)
+display(pairs)
+findClosestPair(pairs)
