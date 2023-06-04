@@ -24,7 +24,6 @@ display(pairs)
 
 X = np.array(sorted(pairs, key=lambda p: (p[0], p[1])))
 
-display(X)
 
 d = findClosestPair(X)
 print(d)
