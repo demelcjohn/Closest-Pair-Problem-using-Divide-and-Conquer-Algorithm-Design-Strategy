@@ -1,3 +1,4 @@
+import numpy as np
 from helperFunc import dist
 
 
@@ -18,4 +19,10 @@ def findClosestPair(X, Y):
     S = []
     for i in range(n):
         if ((X[n//2][0]-d <= Y[0]) and (X[n//2][0]+d >= Y[0])):
-            S = S.append(Y[i])
+            S = S.append(X[i])
+    matrixS = np.array(S, dtype='object')
+    dS = findClosestPair(matrixS, Y)
+
+    d = min(d, dS)
+
+    return d
