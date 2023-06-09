@@ -2,6 +2,7 @@ import random
 import numpy as np
 from helperFunc import display
 from findClosestPair import findClosestPair
+from rep import representation
 
 
 def generateElements(matrix, n):
@@ -27,3 +28,5 @@ X = np.array(sorted(pairs, key=lambda p: (p[0], p[1])))
 
 d, A, B = findClosestPair(X)
 print(d, A, B)
+
+representation(pairs,A,B,n)
