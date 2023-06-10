@@ -23,14 +23,13 @@ data = [
     ['n', 'divAndConTime', 'bruteForceTime']
 ]
 
-for i in range(3,100):
+for i in range(3,1000):
     row = []
     n = i
     row.append(n)
     pairs = np.empty((n, 2), dtype=int)
     pairs = generateElements(pairs, n)
 
-    display(pairs)
 
     X = np.array(sorted(pairs, key=lambda p: (p[0], p[1])))
 

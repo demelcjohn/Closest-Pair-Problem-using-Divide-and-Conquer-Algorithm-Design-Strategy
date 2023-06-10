@@ -16,19 +16,19 @@ with open('data.csv', 'r') as file:
 
 n = []
 divAndConTime = []
-bruteforceTime = []
+bruteForceTime = []
 for row in data:
     n.append(float(row['n']))
     divAndConTime.append(float(row['divAndConTime']))
-    bruteforceTime.append(float(row['bruteforceTime']))
+    bruteForceTime.append(float(row['bruteForceTime']))
 
 mean_divAndConTime = np.mean(divAndConTime)
 variance_divAndConTime = np.var(divAndConTime)
 std_dev_divAndConTime = np.std(divAndConTime)
 
-mean_bruteforceTime = np.mean(bruteforceTime)
-variance_bruteforceTime = np.var(bruteforceTime)
-std_dev_bruteforceTime = np.std(bruteforceTime)
+mean_bruteForceTime = np.mean(bruteForceTime)
+variance_bruteForceTime = np.var(bruteForceTime)
+std_dev_bruteForceTime = np.std(bruteForceTime)
 
 
 
@@ -41,10 +41,10 @@ plt.scatter(n, divAndConTime, label='divAndConTime')
 
 
 
-params, _ = curve_fit(curve_func, n, bruteforceTime)
+params, _ = curve_fit(curve_func, n, bruteForceTime)
 x_curve = np.linspace(min(n), max(n), 100)
 y_curve = curve_func(x_curve, *params)
-plt.scatter(n, bruteforceTime, label='bruteforceTime')
+plt.scatter(n, bruteForceTime, label='bruteForceTime')
 
 plt.xlabel('n')
 plt.ylabel('time in sec')
