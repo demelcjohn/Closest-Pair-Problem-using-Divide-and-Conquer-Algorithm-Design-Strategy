@@ -11,4 +11,4 @@ def bruteforce(X):
                 if d<min:
                     min = d
                     points = (X[i],X[j])
-    return d,points[0],points[1]
+    return min,points[0],points[1]
