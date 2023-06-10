@@ -16,7 +16,7 @@ def generateElements(matrix, n):
     return matrix
 
 
-n = 10
+n = 30
 
 pairs = np.empty((n, 2), dtype=int)
 pairs = generateElements(pairs, n)
